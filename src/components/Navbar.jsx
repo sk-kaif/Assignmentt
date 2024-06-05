@@ -24,7 +24,7 @@ const Navbar = () => {
             {
                 navItems.map((item,idx)=>{
                     return <div className="flex items-center justify-between border-t-[1px] w-[15%] text-lg cursor-pointer" key={idx}>
-                        <span className='pt-1 uppercase font-semibold'>{item}</span>
+                        <span className='pt-1 uppercase font-semibold '>{item}</span>
                         <FiArrowUpRight className='text-xl' />
                     </div>
                 })

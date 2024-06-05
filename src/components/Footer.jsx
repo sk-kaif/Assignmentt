@@ -15,12 +15,12 @@ const Footer = () => {
             <div className="flex-1 my-6 md:my-0">
                 <h1 className="py-2 uppercase border-b-2 font-semibold">Links</h1>
                 <div className="flex mt-5 flex-col gap-3">
-                    <p className="">Home</p>
-                    <p className="">Parks</p>
-                    <p className="">Solutions</p>
-                    <p className="">Explore</p>
-                    <p className="">Sustainablity</p>
-                    <p className="">Contact us</p>
+                    <p className="cursor-pointer">Home</p>
+                    <p className="cursor-pointer">Parks</p>
+                    <p className="cursor-pointer">Solutions</p>
+                    <p className="cursor-pointer">Explore</p>
+                    <p className="cursor-pointer">Sustainablity</p>
+                    <p className="cursor-pointer">Contact us</p>
                 </div>
             </div>
             <div className="flex-1 my-6 md:my-0 ">
