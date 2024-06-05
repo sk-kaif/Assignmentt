@@ -6,7 +6,6 @@
 @tailwind utilities;
 
 
-
 .bgOwn{
     background-image: url('/public/heroBg.png');
     background-position: center;

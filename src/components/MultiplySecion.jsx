@@ -5,6 +5,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import Category from "./Category";
 import { MyContext } from "../App";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 const MultiplySecion = () => {
     const { data } = useContext(MyContext);
@@ -17,30 +18,22 @@ const MultiplySecion = () => {
 
             <div className="lg:w-[65%]">
             <h1 className="lg:text-3xl text-2xl font-semibold my-2">Featured  This month</h1>
-                <div className="parent lg:w-[100%] justify-between md:flex flex-wrap gap-1 lg:gap-2">
-                    {
-                        limitedData.map((item)=>{
-                            return <div className="my-5 lg:my-0 md:w-[48%]  w-full h-96 md:h-[450px] md:pb-6 " key={item.id}>
-
-                            {/* <div className={`bg-[url(${item.acf.blog_image})] md:h-[60%] h-[50%] rounded-md`}> */}
-                            <div className={`bg-cover bg-center md:h-[60%] h-[50%] rounded-md`} style={{backgroundImage:`url(${item.acf.blog_image})`}}>
-                            </div>
-                            <div className="mt-5 p-2 h-[40%] text-sm">
-                                <h2 className="text-base md:text-xl my-1 font-semibold">{item.title}</h2>
-                                <div className="flex items-center my-2 justify-between w-fit gap-2">
-                                    <MdOutlineDateRange />
-                                    <span>{item.acf.blog_publish_date}</span>
-                                </div>
-                                <p className="">
-                                {item.acf.meta_description.substring(0,97)}...
-                                </p>
-                            </div>
-    
+                <div className="parent lg:w-[100%] justify-between md:flex flex-wrap gap-1 lg:gap-2 ">   
+                {limitedData.map((item) => (
+                    <Link to={`/cart/${item.id}`} className="my-5 lg:my-0 md:w-[48%] w-full h-96 md:h-[450px] md:pb-6" key={item.id}>
+                    <div className={`bg-cover bg-center md:h-[60%] h-[200px] rounded-md`} style={{backgroundImage: `url(${item.acf.blog_image})`}}></div>
+                    <div className="mt-5 p-2 h-[40%] text-sm">
+                        <h2 className="text-base md:text-xl my-1 font-semibold">{item.title}</h2>
+                        <div className="flex items-center my-2 justify-between w-fit gap-2">
+                        <MdOutlineDateRange />
+                        <span>{item.acf.blog_publish_date}</span>
                         </div>
-                        })
-                    }
-                    
-                    
+                        <p className="">
+                        {item.acf.meta_description.substring(0, 97)}...
+                        </p>
+                    </div>
+                    </Link>
+                ))}                 
                 </div>
                 
             </div>
@@ -54,7 +47,7 @@ const MultiplySecion = () => {
 
 
         {/* Pagenation */}
-        <div className="page  w-[90%] mx-auto flex items-center justify-center">
+        <div className="page  w-[90%] mx-auto flex items-center justify-center md:my-16 my-11">
             <div className="flex md:gap-4 gap-2">
                 
                 <div className="cursor-pointer border-2 rounded-sm md:px-4 px-2 md:text-lg flex items-center gap-2">
