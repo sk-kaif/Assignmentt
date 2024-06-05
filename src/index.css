@@ -5,10 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.b{border: 1px solid black;}
-.o{border: 1px solid orange;}
-.w{border: 1px solid white;}
-.r{border: 1px solid red;}
+
 
 .bgOwn{
     background-image: url('/public/heroBg.png');
